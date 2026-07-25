@@ -1,0 +1,18 @@
+Time Complexity:
+Best Case: O(1) 
+Average Case: O(log n) 
+Worst Case: O(log n) 
+
+
+Space Complexity:
+Iterative Binary Search: O(1) 
+Recursive Binary Search: O(log n)
+
+
+Conclusion:
+      Binary Search is an efficient searching algorithm that works by repeatedly dividing the sorted array
+into two halves until the target element is found or the search space becomes empty. It significantly redu
+ces the number of comparisons compared to Linear Search, making it highly suitable for searching in large s
+orted datasets. However, Binary Search requires the input data to be sorted before searching. Because of it
+s speed, efficiency, and practical use in many real-world applications, it is one of the most widely used 
+searching algorithms.
