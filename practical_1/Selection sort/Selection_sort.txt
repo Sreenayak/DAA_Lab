@@ -1,0 +1,15 @@
+Time Complexity:
+Best Case: O(n²)
+Average Case: O(n²)
+Worst Case: O(n²)
+
+
+Space Complexity:
+O(1) (In-place sorting algorithm)
+
+Conclusion:
+        Selection Sort is a simple, in-place comparison-based sorting algorithm that repeatedly selects the smallest element
+from the unsorted portion of the array and places it in its correct position. It is easy to understand and implement, making 
+it suitable for learning basic sorting techniques and handling small datasets. Although it performs a fixed number of compari
+sons regardless of the input order, making it less efficient for large datasets, its low memory usage and straightforward imp
+lementation make it a useful algorithm for educational purposes.
