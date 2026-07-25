@@ -1,0 +1,15 @@
+Time Complexity:
+
+Best Case: O(n) (when the optimized version with a swap flag is used and the array is already sorted)
+Average Case: O(n²)
+Worst Case: O(n²)
+
+Space Complexity:
+
+O(1) (In-place sorting algorithm)
+
+Conclusion:
+        Bubble Sort is a simple, stable, and in-place sorting algorithm that repeatedly compares adjacent elements
+and swaps them if they are in the wrong order. It is easy to understand and implement, making it suitable for beginners 
+and small datasets. However, it is not efficient for large datasets because it requires many comparisons and swaps. 
+Despite its limitations, Bubble Sort is widely used to learn the fundamentals of sorting algorithms.
