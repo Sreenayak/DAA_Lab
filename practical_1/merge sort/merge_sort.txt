@@ -1,0 +1,19 @@
+Merge Sort
+
+
+Time Complexity:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+
+
+Space Complexity:
+O(n) (Requires additional memory for temporary arrays during the merge process.)
+
+
+Conclusion:
+         Merge Sort is an efficient, stable, and comparison-based sorting algorithm that follows the Divide and Conquer approach.
+It recursively divides the array into smaller subarrays, sorts them, and then merges them to produce a fully sorted array. It pro
+vides consistent performance for all input cases, making it suitable for sorting large datasets. Although it requires additional 
+memory for the merging process, its predictable performance and stability make it one of the most widely used sorting algorithms 
+in real-world applications such as external sorting, linked lists, and large-scale data processing.

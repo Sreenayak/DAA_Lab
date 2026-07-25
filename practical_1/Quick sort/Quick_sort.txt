@@ -1,0 +1,21 @@
+Quick Sort
+
+Time Complexity:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n²)
+
+
+Space Complexity:
+O(log n) (Average Case – Recursive Call Stack)
+O(n) (Worst Case – When recursion becomes highly unbalanced)
+
+
+Conclusion:
+        Quick Sort is a fast, efficient, and in-place comparison-based sorting algorithm that also follows
+the Divide and Conquer approach. It works by selecting a pivot element and partitioning the array into sma
+ller subarrays based on the pivot value. It is one of the most commonly used sorting algorithms because of 
+its excellent average-case performance and low memory requirements. However, its performance depends on the 
+choice of the pivot element, and poor pivot selection can lead to unbalanced partitions and reduced efficie
+ncy. Despite this limitation, Quick Sort remains one of the fastest sorting algorithms for practical applic
+ations and is widely used in software libraries and operating systems.
