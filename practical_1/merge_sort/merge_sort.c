@@ -1,119 +1,81 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void merge(int arr[], int left, int mid, int right)
+void merge(int arr[], int low, int mid, int high)
 {
-    int i, j, k;
+    int temp[100];
+    int i = low;
+    int j = mid + 1;
+    int k = low;
 
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
-
-    int *L = (int *)malloc(n1 * sizeof(int));
-    int *R = (int *)malloc(n2 * sizeof(int));
-
-
-    for (i = 0; i < n1; i++)
-        L[i] = arr[left + i];
-
-    for (j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
-
-    i = 0;
-    j = 0;
-    k = left;
-
-
-    while (i < n1 && j < n2)
+    while (i <= mid && j <= high)
     {
-        if (L[i] <= R[j])
+        if (arr[i] < arr[j])
         {
-            arr[k] = L[i];
+            temp[k] = arr[i];
             i++;
         }
         else
         {
-            arr[k] = R[j];
+            temp[k] = arr[j];
             j++;
         }
         k++;
     }
 
-    
-    while (i < n1)
+    while (i <= mid)
     {
-        arr[k] = L[i];
+        temp[k] = arr[i];
         i++;
         k++;
     }
 
-    
-    while (j < n2)
+    while (j <= high)
     {
-        arr[k] = R[j];
+        temp[k] = arr[j];
         j++;
         k++;
     }
 
-    free(L);
-    free(R);
+    for (i = low; i <= high; i++)
+    {
+        arr[i] = temp[i];
+    }
 }
 
-
-void mergeSort(int arr[], int left, int right)
+void mergeSort(int arr[], int low, int high)
 {
-    if (left < right)
+    if (low < high)
     {
-        int mid = left + (right - left) / 2;
+        int mid = (low + high) / 2;
 
-    
-        mergeSort(arr, left, mid);
+        mergeSort(arr, low, mid);
+        mergeSort(arr, mid + 1, high);
 
-    
-        mergeSort(arr, mid + 1, right);
-
-        
-        merge(arr, left, mid, right);
+        merge(arr, low, mid, high);
     }
 }
 
 int main()
 {
+    int arr[100];
     int n, i;
 
-    
-    printf("Enter the number of elements: ");
+    printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    int *arr = (int *)malloc(n * sizeof(int));
-
-    
-    printf("Enter %d elements:\n", n);
-
+    printf("Enter elements:\n");
     for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
 
-    // Display original array
-    printf("\nOriginal array: ");
-
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-
-
     mergeSort(arr, 0, n - 1);
 
-    // Display sorted array
-    printf("\nSorted array: ");
-
+    printf("Sorted array:\n");
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
-
-    free(arr);
 
     return 0;
 }
