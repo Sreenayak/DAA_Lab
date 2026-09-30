@@ -1,42 +1,67 @@
 #include <stdio.h>
 
+int m[20][20];
+int s[20][20];
+int p[20];
+
+void printOrder(int i, int j)
+{
+    if(i == j)
+    {
+        printf("A%d", i);
+        return;
+    }
+
+    printf("(");
+
+    printOrder(i, s[i][j]);
+    printOrder(s[i][j] + 1, j);
+
+    printf(")");
+}
+
 int main()
 {
-    int n, i, j, k, l;
-    int p[20], m[20][20];
-    int min, cost;
+    int n, i, j, k, len;
+    int cost;
 
     printf("Enter number of matrices: ");
     scanf("%d", &n);
 
-    printf("Enter %d dimensions: ", n + 1);
-    for (i = 0; i <= n; i++)
+    printf("Enter dimensions: ");
+    for(i = 0; i <= n; i++)
         scanf("%d", &p[i]);
 
-    // Cost of multiplying one matrix is 0
-    for (i = 1; i <= n; i++)
+    for(i = 1; i <= n; i++)
         m[i][i] = 0;
 
-    // l = chain length
-    for (l = 2; l <= n; l++)
+    for(len = 2; len <= n; len++)
     {
-        for (i = 1; i <= n - l + 1; i++)
+        for(i = 1; i <= n - len + 1; i++)
         {
-            j = i + l - 1;
+            j = i + len - 1;
             m[i][j] = 999999;
 
-            for (k = i; k < j; k++)
+            for(k = i; k < j; k++)
             {
                 cost = m[i][k] + m[k + 1][j]
-                       + p[i - 1] * p[k] * p[j];
+                     + p[i - 1] * p[k] * p[j];
 
-                if (cost < m[i][j])
+                if(cost < m[i][j])
+                {
                     m[i][j] = cost;
+                    s[i][j] = k;
+                }
             }
         }
     }
 
-    printf("Minimum number of multiplications = %d\n", m[1][n]);
+    printf("\nMinimum multiplication cost = %d\n", m[1][n]);
+
+    printf("Optimal multiplication order = ");
+    printOrder(1, n);
+
+    printf("\n");
 
     return 0;
 }
