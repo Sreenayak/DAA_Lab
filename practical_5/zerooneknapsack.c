@@ -40,7 +40,7 @@ int main()
     scanf("%d", &capacity);
 
     
-    int dp[n + 1][capacity + 1];
+    int zk[n + 1][capacity + 1];
 
 
     for (int i = 0; i <= n; i++)
@@ -49,24 +49,24 @@ int main()
         {
             if (i == 0 || w == 0)
             {
-                dp[i][w] = 0;
+                zk[i][w] = 0;
             }
             else if (weight[i - 1] <= w)
             {
-                dp[i][w] = max(
-                    profit[i - 1] + dp[i - 1][w - weight[i - 1]],
-                    dp[i - 1][w]
+                zk[i][w] = max(
+                    profit[i - 1] + zk[i - 1][w - weight[i - 1]],
+                    zk[i - 1][w]
                 );
             }
             else
             {
-                dp[i][w] = dp[i - 1][w];
+                zk[i][w] = zk[i - 1][w];
             }
         }
     }
 
     
-    printf("\nMaximum Profit = %d\n", dp[n][capacity]);
+    printf("\nMaximum Profit = %d\n", zk[n][capacity]);
 
 
     int w = capacity;
@@ -75,7 +75,7 @@ int main()
 
     for (int i = n; i > 0; i--)
     {
-        if (dp[i][w] != dp[i - 1][w])
+        if (zk[i][w] != zk[i - 1][w])
         {
             printf("Item %d (Weight = %d, Profit = %d)\n",
                    i, weight[i - 1], profit[i - 1]);
