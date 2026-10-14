@@ -25,14 +25,13 @@ int main()
     dp[0] = 0;
     selected[0] = -1;
 
-    // Initialize DP array
     for (int i = 1; i <= amount; i++)
     {
         dp[i] = INT_MAX;
         selected[i] = -1;
     }
 
-    // Calculate minimum coins
+
     for (int i = 1; i <= amount; i++)
     {
         for (int j = 0; j < n; j++)
@@ -50,7 +49,6 @@ int main()
         }
     }
 
-    // Check if change is possible
     if (dp[amount] == INT_MAX)
     {
         printf("Change cannot be made for the given amount.\n");
