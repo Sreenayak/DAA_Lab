@@ -23,6 +23,6 @@ int main() {
 
     printf("Number of buildings receiving sunlight: %d\n", count);
     printf("Height of the tallest building receiving sunlight: %d\n", maxHeight);
-
+    
     return 0;
 }
