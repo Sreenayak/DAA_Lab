@@ -26,7 +26,6 @@ int main()
         scanf("%d", &weight[i]);
     }
 
-    
     printf("\nEnter profits of items:\n");
 
     for (int i = 0; i < n; i++)
