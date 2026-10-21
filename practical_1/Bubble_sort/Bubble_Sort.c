@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int arr[100], n, i, j, temp;
+    int arr[50], n, i, j, temp;
 
    
     printf("Enter the number of elements: ");
