@@ -35,3 +35,12 @@ DAA_Lab/
 ├── practical_8/{BFS.c, BFS.exe, BFS.md, BFS_output.png, DFS.C, DFS.exe, DFS.md, DFS_output.png}
 ├── practical_9/{prims.c, prims.exe, prims.md, prims_output.png}
 ├── practical_10/{kruskal.c, kruskal.exe, kruskal.md, kruskal_output.png}
+├── practical_11/{floyd_warshell_algorithm.c, floyd_warshell_algorithm.md, floyd_warshell_algorithm_output.png}
+└── practical_12/{TSP.c, TSP.md, TSP_output.png}
+```
+
+## Practical topics
+
+- `practical_1`: Bubble, Quick, Selection, Insertion, and Merge Sort
+- `practical_2`: Binary and Linear Search
+- `practical_3`: Max-Heap Sort
