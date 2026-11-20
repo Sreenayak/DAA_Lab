@@ -44,3 +44,12 @@ DAA_Lab/
 - `practical_1`: Bubble, Quick, Selection, Insertion, and Merge Sort
 - `practical_2`: Binary and Linear Search
 - `practical_3`: Max-Heap Sort
+- `practical_4`: Recursive Factorial
+- `practical_5`: 0/1 Knapsack
+- `practical_6`: Matrix Chain Multiplication
+- `practical_7`: Minimum Coin Change
+- `practical_8`: Breadth-First Search (BFS) and Depth-First Search (DFS)
+- `practical_9`: Prim's Minimum Spanning Tree
+- `practical_10`: Kruskal's Minimum Spanning Tree
+- `practical_11`: Floyd-Warshall All-Pairs Shortest Paths
+- `practical_12`: Traveling Salesperson Problem (TSP)
