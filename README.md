@@ -8,3 +8,12 @@ Each `practical_N` folder groups source code, a compiled executable when present
 
 The notes describe each algorithm and its best, average, and worst time and space complexity.
 
+PNG files show sample program output. Existing executable files can be run on Windows.
+
+## Project structure
+
+```text
+DAA_Lab/
+├── README.md
+├── sunlightreach.c
+├── sunlightreach.exe
