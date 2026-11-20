@@ -26,3 +26,12 @@ DAA_Lab/
 │   └── merge_sort/{merge_sort.c, merge_sort.exe, merge_sort.md, Merge_sort_output.png}
 ├── practical_2/
 │   ├── Binary_search/{Binary_search.c, Binary_search.exe, Binary_search.md, Binary_search_output.png}
+│   └── linear_search/{linear_search.c, linear_search.exe, linear_search.md, linear_search_output.png}
+├── practical_3/{Max_heap_sort.c, Max_heap_sort.exe, Max_heap_sort.md, Max_heap_sort_output.png}
+├── practical_4/{factorial.c, factorial.exe, factorial.md, factorial_output.png}
+├── practical_5/{zerooneknapsack.c, zerooneknapsack.exe, zerooneknapsack.md, zerooneknapsack_output.png}
+├── practical_6/{matrix_chain_multiplication.c, matrix_chain_multiplication.exe, matrix_chain_multiplication.md, matrix_chain_multiplication_output.png}
+├── practical_7/{coinchange.c, coinchange.exe, coinchange.md, coinchange_output.png}
+├── practical_8/{BFS.c, BFS.exe, BFS.md, BFS_output.png, DFS.C, DFS.exe, DFS.md, DFS_output.png}
+├── practical_9/{prims.c, prims.exe, prims.md, prims_output.png}
+├── practical_10/{kruskal.c, kruskal.exe, kruskal.md, kruskal_output.png}
